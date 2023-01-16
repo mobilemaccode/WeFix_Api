@@ -41,76 +41,100 @@ class _ProductPageState extends State<ProductPage> {
               ),
               //
               SizedBox(height: 20,),
-              Container(
-                color: colorWhite,
+                Container(
+     decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15.0))),
+                           
                margin: EdgeInsets.only(left: 15,right: 15,),
-
-                child: Column(children: [
+      child: Column(children: [
               Container(
-                margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
-                width: MediaQuery.of(context).size.width,
-                color: colorWhite,
-                child: Column(
-                  children: [
-                     Row(
-              children: [
+                 margin: const EdgeInsets.only(left: 25,right: 25,top: 20),
                 
-                Image.asset("assets/icons/tag.png"),
-                sizedboxwidth(10.0),
-                Text(
-                    // model.astrologerListdb[index]['user_avability'].toString(),
-                    'All Product',
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 25, fontWeight: fontWeight600)),
-              ],
-            ),
-
-           
-                  ],
-                ),
-              ),
-
-              Container(
-
-                margin: const EdgeInsets.only(left: 15, right: 10, top: 25),
+                width: MediaQuery.of(context).size.width,
+               
                 color: colorWhite,
-                height: 670,
+             
+                  child: Column(
+                    children: [
+                      Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                child:Row(children: [
+                                   sizedboxwidth(5.0),
+                                  Image.asset("assets/icons/tag.png"),
+                                  sizedboxwidth(10.0),
+                                   Text(
+                                    " All Products",
+                                    style: TextStyle(
+                                      color: colorblack,
+                                      fontSize: 25.0,fontWeight:FontWeight.bold,
+                                    ),
+                                  ),
+                               ],),
+                                ),
+                              ),
+                              // btnviewd()
+                 
+                           
+                           
+                            
+                          ]),
+                      
+                    ],
+                  ),
+                ),
+               Container(
+
+                margin: const EdgeInsets.only(left: 10, right: 10,top: 15 ),
+               decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(19.0))),
+                           
+                height: 750,
                 child: GridView.builder(
                   itemCount: 8,
                   scrollDirection: Axis.horizontal,
-                  // physics: AlwaysScrollableScrollPhysics(),
+                  physics: AlwaysScrollableScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 4,
-                      crossAxisSpacing: 2.0,
-                      mainAxisSpacing: 4.0),
+                      crossAxisSpacing:0.5,
+                      mainAxisSpacing: 0.5),
                   itemBuilder: (BuildContext context, int index) {
                     
                     return Container(
                       child: Column(
                         children: [
                           Container(
+                            
                             child: InkWell(
                               onTap: () {
                                 Get.to(() => ProductDetails());
                               },
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  SizedBox(
-                                    width: 159,
-                                    height: 138,
+                                  Container(
+                                    decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15.0))),
+                           
+                                  
 
-                                    child:
-                                        //  model.astrologerListdb[index]['profile_image'] != null
-                                        //     ? Image.network(
-                                        //         model.astrologerListdb[index]['image_url'].toString(),
-                                        //         fit: BoxFit.cover,
-                                        //         errorBuilder: (context, exception, stackTrack) =>Center(child: Text('Not \n found',textAlign: TextAlign.center,style: TextStyle(fontSize: 10),)),
-                                        //       )
-                                        //     :
-                                        Image(
+                                    child:Column(children: [
+                                      SizedBox(
+                                    width: 145,
+                                    height: 154,
+
+                                   
+                                    child:Image(
                                             image: AssetImage(
                                                 'assets/images/phone.png'),
-                                            fit: BoxFit.contain),
+                                            fit: BoxFit.cover),
 
                                     //     Image(
                                     //   image: AssetImage('assets/images/clip1.png'),
@@ -118,19 +142,21 @@ class _ProductPageState extends State<ProductPage> {
                                     // )
                                   ),
 
-                                  // Image.asset(
-                                  //   "assets/images/phone.png",
-                                  //   fit: BoxFit.cover,
-                                  // ),
-                                
-                              SizedBox(height: 4,),
+                                 
+                                 SizedBox(height: 4,),
                                   Text(
-                                    "Mobile",
+                                    "Mobile ",
                                     style: TextStyle(
                                       color: HexColor("#252843"),
                                       fontSize: 20.0,fontWeight: fontWeight600
                                     ),
                                   ),
+                                     SizedBox(height: 5,),
+                                 
+                                  ],)),
+
+                                
+                             
                                 ],
                               ),
                             ),
@@ -143,7 +169,122 @@ class _ProductPageState extends State<ProductPage> {
                 ),
               ),
             
-            ],),),
+             
+
+              ],),),
+              
+
+            //   Container(
+            
+            //    margin: EdgeInsets.only(left: 15,right: 15,),
+            //        decoration: BoxDecoration(
+            //           color: colorWhite,
+            //           borderRadius: BorderRadius.circular(15),
+            //           border: Border.all(color: colorblack.withOpacity(0.1)),
+            //           boxShadow:boxShadowcontainer(),
+            //         ),
+                
+
+            //     child: Column(children: [
+            //   Container(
+            //     margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+            //     width: MediaQuery.of(context).size.width,
+            //     color: colorWhite,
+            //     child: Column(
+            //       children: [
+            //          Row(
+            //   children: [
+                
+            //     Image.asset("assets/icons/tag.png"),
+            //     sizedboxwidth(10.0),
+            //     Text(
+            //         // model.astrologerListdb[index]['user_avability'].toString(),
+            //         'All Product',
+            //         overflow: TextOverflow.ellipsis,
+            //         style: TextStyle(fontSize: 25, fontWeight: fontWeight600)),
+            //   ],
+            // ),
+
+           
+            //       ],
+            //     ),
+            //   ),
+
+            //   Container(
+
+            //     margin: const EdgeInsets.only(left: 15, right: 10, top: 25),
+            //     color: colorWhite,
+            //     height: 670,
+            //     child: GridView.builder(
+            //       itemCount: 8,
+            //       scrollDirection: Axis.horizontal,
+            //       // physics: AlwaysScrollableScrollPhysics(),
+            //       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            //           crossAxisCount: 4,
+            //           crossAxisSpacing: 2.0,
+            //           mainAxisSpacing: 4.0),
+            //       itemBuilder: (BuildContext context, int index) {
+                    
+            //         return Container(
+            //           child: Column(
+            //             children: [
+            //               Container(
+            //                 child: InkWell(
+            //                   onTap: () {
+            //                     Get.to(() => ProductDetails());
+            //                   },
+            //                   child: Column(
+            //                     children: [
+            //                       SizedBox(
+            //                         width: 159,
+            //                         height: 138,
+
+            //                         child:
+            //                             //  model.astrologerListdb[index]['profile_image'] != null
+            //                             //     ? Image.network(
+            //                             //         model.astrologerListdb[index]['image_url'].toString(),
+            //                             //         fit: BoxFit.cover,
+            //                             //         errorBuilder: (context, exception, stackTrack) =>Center(child: Text('Not \n found',textAlign: TextAlign.center,style: TextStyle(fontSize: 10),)),
+            //                             //       )
+            //                             //     :
+            //                             Image(
+            //                                 image: AssetImage(
+            //                                     'assets/images/phone.png'),
+            //                                 fit: BoxFit.contain),
+
+            //                         //     Image(
+            //                         //   image: AssetImage('assets/images/clip1.png'),
+            //                         //   fit: BoxFit.cover,
+            //                         // )
+            //                       ),
+
+            //                       // Image.asset(
+            //                       //   "assets/images/phone.png",
+            //                       //   fit: BoxFit.cover,
+            //                       // ),
+                                
+            //                   SizedBox(height: 4,),
+            //                       Text(
+            //                         "Mobile",
+            //                         style: TextStyle(
+            //                           color: HexColor("#252843"),
+            //                           fontSize: 20.0,fontWeight: fontWeight600
+            //                         ),
+            //                       ),
+            //                     ],
+            //                   ),
+            //                 ),
+            //               ),
+            //             ],
+            //           ),
+            //         );
+                 
+            //       },
+            //     ),
+            //   ),
+            
+            // ],),),
+           
             ],
           ),
         ),

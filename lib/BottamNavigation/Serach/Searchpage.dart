@@ -52,9 +52,9 @@ class _SearchpageState extends State<Searchpage> {
                 
               ),
             
-             SizedBox(height: 30,),
+             SizedBox(height: 10,),
      Container(
-        height: 600,
+        height: 650,
                     margin: EdgeInsets.only(bottom: 10, top: 10,right: 20,left: 20) ,
                     padding: EdgeInsets.all(10.0),
                    

@@ -1,7 +1,5 @@
 // ignore_for_file: unused_import, prefer_const_constructors
 
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -48,27 +46,51 @@ Widget btn3() {
       });
 }
 
-
 Widget btn6() {
   return Button(
       buttonName: "See All  >",
       borderColor: HexColor("#EFEFEF"),
-    
       btnHeight: 40.0,
       btnWidth: 97.0,
       btnColor: colorWhite,
       textColor: HexColor("#6F767E"),
       borderRadius: BorderRadius.circular(15.0),
-      
-       
-      
-        
-    
-      
       onPressed: () {
         Get.to(() => ProductPage());
       });
+}
 
+Widget btnviewd() {
+  return Container(
+    height: 35,
+    width: 80,
+    
+    margin: const EdgeInsets.only(left: 10, right: 10,),
+    decoration: BoxDecoration(
+                  
+                  border: Border.all(
+                    color: HexColor("#EFEFEF"),
+                    width: 0.65,
+                  ),borderRadius:  BorderRadius.all(Radius.circular(15.0),)
+                  ),
+              //  decoration: BoxDecoration(
+              //                   color: Colors.white,
+                          
+              //                   borderRadius:
+              //                       BorderRadius.all(Radius.circular(15.0),)),
+                                  
+                    child:  InkWell(
+                onTap: () {
+                  Get.to(() => ProductPage());
+                },
+    child: Row(mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+      Text("See All",style: TextStyle(fontSize: 18,fontWeight: fontWeight600,color:HexColor("#6F767E"))),
+
+      Icon(Icons.keyboard_arrow_right,size: 18,color: HexColor("#6F767E"),)
+    ],),
+              ),
+  );
 }
 
 Widget btnLocation(context) {
@@ -81,52 +103,4 @@ Widget btnLocation(context) {
       onPressed: () {
         // Get.to(() => KnowMoreAboutFirstScreen());
       });
-}
-
-Widget loginsearch1111(context) {
-  return Padding(
-    padding: EdgeInsets.only(right: 10, left: 10),
-    child: TextField(
-      // controller: model.userIdController,
-      // obscureText: true,
-      decoration: InputDecoration(
-         
-        enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: HexColor("#EFEFEF"),width: 1),
-    ),
-    
-        
-        filled: true, //<-- SEE HERE
-        fillColor: HexColor("#F5F5F5"),
-        hintStyle: TextStyle(
-            fontSize: 17,
-            fontWeight: fontWeight500,
-            color: HexColor("#D1D3D4")),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-
-        // labelText: 'Email',
-        hintText: 'See All ',
-        suffixIcon: Icon(Icons.keyboard_arrow_right_outlined,size: 15,)
-    //      suffixIcon: TextButton(
-   
-    //   onPressed: () {
-    //     // model.toggle();
-    //   },
-    //   // icon: Icon(Icons.visibility, size: 20.0, color: model.isTapVissible ? colorredlightbtn :Colors.black45 ),
-    
-    //   child:Container(
-        
-    //     margin: EdgeInsets.only(left: 20),
-    //     height: 35,
-    //     width: 35,
-        
-    //   child:Image.asset("assets/icons/searchgroup.png"),
-    //   ),
-    
-    // ),
-  
-        
-      ),
-    ),
-  );
 }

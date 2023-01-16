@@ -23,11 +23,19 @@ class _FiltterpageState extends State<Filtterpage> {
       ),
      
       body: Container(
+         
            color: HexColor("#F9F9F9"),
         child: Column(
+           
+            
+           
+            
           children: [
-            Column(children: [
-              SizedBox(height: 20),
+            Column( 
+            
+
+              children: [
+            
             // Icon(Icons.arrow_back, size: 25),
             //  arrow(context),
 
@@ -43,9 +51,12 @@ class _FiltterpageState extends State<Filtterpage> {
             Container(
               margin: EdgeInsets.only(left: 30,right: 10,),
               
-             child: Row(children: [
+             child: Row(
+              children: [
+                  Image.asset("assets/icons/tag.png", fit: BoxFit.contain),
+                  sizedboxwidth(10.0),
               
-              Text("Filter",style: TextStyle(fontSize: 40,color: colorblack),),
+              Text("Filter",style: TextStyle(fontSize: 35,color:HexColor("#1A1D1F"),fontWeight: fontWeight600),),
              
           
               // btn5(),
@@ -54,71 +65,145 @@ class _FiltterpageState extends State<Filtterpage> {
               ],),
             ),
             SizedBox(height: 20),
-          
-            Stack(children: [
-             Container(
-                margin: EdgeInsets.only(left: 15,right: 20,),
-                child: SingleChildScrollView(
-                  // physics: AlwaysScrollableScrollPhysics(),
-                  child: Container(
-                 
-                      decoration: BoxDecoration(
-                          color: colorWhite,
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(10.0))),
-                      width: 500.0,
-                      height: 650.0,
 
-                      child: Column(
-                        
-                        children: [
-                         
-                          sizedboxheight(20.0),
-                          InkWell(
-                            onTap: () {
-                              // Get.to(() => PackageDetailPage());
-                            },
-                            child:  Container(
-        child: Container(
-           margin: EdgeInsets.only(left: 10,right: 20,),
-          
-          child: Column(children: [
-          SizedBox(height: 10),
-          
-          // Text("Category",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          SizedBox(height: 10),
-
-           filtter(context),
-          SizedBox(height: 10),
-          // Text("Date",style: TextStyle(fontSize: 20, color: colorblack)),
-          SizedBox(height: 10),
-
-          filtter1(context),
-           SizedBox(height: 10),
-          //  Text("Price",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-           filtter2(context),
-           SizedBox(height: 190),
-           fillterall(),
-          //  btnnotyall(),
-
-
-
-        ],)),
-      )
-      // // 
-
+            Container(
+        
+             
+              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10.0))),
                            
+              
+               margin: EdgeInsets.only(left: 25,right: 15,top: 15),
+              child: Column(
+                
+                children: [
+                  
+                  Container(
+                        margin: EdgeInsets.only(left: 5,right: 15,
+                        top: 10),
+                    child:Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                            margin: EdgeInsets.only(left: 15,right: 15,
+                        ),
+
+                          child: Column(children: [
+
+                  Text("Category",
+   
+               style: TextStyle(fontSize: 18,fontWeight: fontWeight600,color: HexColor("#1A1D1F")),),
+              
+                          ],),
+                        ),
                           
-                          ),
+              
+               SizedBox(height: 5,),
+
+                filtter(context),
+
+           ],)),
+           
+             SizedBox(height: 10),
+              Container(
+                        margin: EdgeInsets.only(left: 5,right: 15,
+                        top: 10),
+                    child:Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                               Container(
+                            margin: EdgeInsets.only(left: 15,right: 15,
+                        ),
+
+                          child: Column(children: [
+
+                  Text("Date",
+   
+               style: TextStyle(fontSize: 18,fontWeight: fontWeight600,color: HexColor("#1A1D1F")),),
+              
+                          ],),
+                        ),
+                          
+              
+              //  Text("Date",style: TextStyle(fontSize: 17,fontWeight:fontWeight600,color: HexColor("#1A1D1F")),),
+               SizedBox(height: 10,),
+                filtter1(context),
+
+           ],)),
+           
+            Container(
+                        margin: EdgeInsets.only(left: 5,right: 15,
+                        top: 10),
+                    child:Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      
+                      children: [
+                             Container(
+                            margin: EdgeInsets.only(left: 15,right: 15,
+                        ),
+
+                          child: Column(children: [
+
+                  Text("Price",
+   
+               style: TextStyle(fontSize: 18,fontWeight: fontWeight600,color: HexColor("#1A1D1F")),),
+              
+                          ],),
+                        ),
+                          
+              
                        
-                          
-                     
-                        ],
-                      )),
-                ),
-              ),
-            ]),
+              //  Text("Price",textAlign: TextAlign.left,style: TextStyle(fontSize: 17,fontWeight: fontWeight600,color: HexColor("#1A1D1F")),),
+               SizedBox(height: 10,),
+                filtter2(context),
+
+           ],)),
+           
+              Padding(
+        padding: const EdgeInsets.only(left: 10,right: 10,top: 150),
+            child: fillterall(),
+      ),
+      
+      SizedBox(height: 10,),
+     ],),),
+     SizedBox(height: 20,),
+
+
+      //              Container(
+      //   child: Container(
+      //      margin: EdgeInsets.only(left: 10,right: 20,),
           
+      //     child: Column(
+      //       mainAxisAlignment: MainAxisAlignment.start,
+      //       children: [
+      
+      //     Text("Category",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
+      //      SizedBox(height: 10),
+
+      //      filtter(context),
+      //     SizedBox(height: 10),
+      //      Text("Date",style: TextStyle(fontSize: 20, color: colorblack)),
+      //     SizedBox(height: 10),
+
+      //     filtter1(context),
+      //      SizedBox(height: 10),
+      //      Text("Price",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+      //      filtter2(context),
+      //      SizedBox(height: 190),
+      //      fillterall(),
+      //     //  btnnotyall(),
+
+
+
+      //   ],)),
+      // )
+   
+
+                        
+          
+        
           ],
         ),
      
@@ -134,62 +219,91 @@ Widget arrow(context) {
    
   );
 }
+
 Widget filtter(context) {
-  return AllInputDesign(
-    inputHeaderName: 'category',
+   return Container(
+    height: 50,
+ 
+    // color: HexColor("#6F767E"),
     
-  
-
-    fillColor: HexColor("#F5F5F5"),
-    hintText: 'Select category',
-    
-
-    suffixIcon: TextButton(
-   
-      onPressed: () {
-        // model.toggle();
-      },
+    margin: const EdgeInsets.only(left: 15, right: 15,),
+    decoration: BoxDecoration(
+                    color: HexColor("#F5F5F5"),
+                  border: Border.all(
+                    color: HexColor("#F5F5F5"),
+                    width: 0.65,
+                  ),borderRadius:  BorderRadius.all(Radius.circular(10.0),)
+                  ),
+                        
+                
+    child: Row(
+      children: [
+          sizedboxwidth(20.0),
+      Text("Select category",style: TextStyle(fontSize: 20,fontWeight: fontWeight600,color:HexColor("#D1D3D4"))),
+      sizedboxwidth(110.0),
+      Icon(Icons.keyboard_arrow_down,size: 25,color: HexColor("#D1D3D4"),)
+    ],),
       
-      child: Icon(Icons.arrow_drop_down, size: 25 ,color: colorblack,),
-    ),
   );
+
+
 }
 Widget filtter1(context) {
-  return AllInputDesign(
-   
-  inputHeaderName: 'Date',
-    fillColor: HexColor("#F5F5F5"),
-    hintText: 'Select Date',
+   return Container(
+    height: 50,
+ 
+    // color: HexColor("#6F767E"),
     
-
-    suffixIcon: TextButton(
-   
-      onPressed: () {
-        // model.toggle();
-      },
+    margin: const EdgeInsets.only(left: 15, right: 15,),
+    decoration: BoxDecoration(
+                    color: HexColor("#F5F5F5"),
+                  border: Border.all(
+                    color: HexColor("#F5F5F5"),
+                    width: 0.65,
+                  ),borderRadius:  BorderRadius.all(Radius.circular(10.0),)
+                  ),
+                        
+                
+    child: Row(
+      children: [
+         sizedboxwidth(20.0),
+      Text("Select Date",style: TextStyle(fontSize: 20,fontWeight: fontWeight600,color:HexColor("#D1D3D4"))),
+           sizedboxwidth(140.0),
+      Icon(Icons.calendar_month,size: 25,color: HexColor("#D1D3D4"),)
+    ],),
       
-      child: Icon(Icons.calendar_month, size: 25 ,color: colorblack,),
-    ),
   );
+
+
 }
 Widget filtter2(context) {
-  return AllInputDesign(
-   
-  inputHeaderName: 'Price',
-    fillColor: HexColor("#F5F5F5"),
-    hintText: 'Select Price',
-    
-
-    // suffixIcon: TextButton(
-   
-    //   onPressed: () {
-    //     // model.toggle();
-    //   },
-      
-    //   // child: Icon(Icons.arrow_drop_down, size: 35, color: colorblack,),
-    // ),
+ return Container(
+    height: 50,
  
+    // color: HexColor("#6F767E"),
+    
+    margin: const EdgeInsets.only(left: 15, right: 15,),
+    decoration: BoxDecoration(
+                    color: HexColor("#F5F5F5"),
+                  border: Border.all(
+                    color: HexColor("#F5F5F5"),
+                    width: 0.65,
+                  ),borderRadius:  BorderRadius.all(Radius.circular(10.0),)
+                  ),
+                        
+                
+    child: Row(
+      children: [
+         sizedboxwidth(20.0),
+      Text("Select Price",style: TextStyle(fontSize: 20,fontWeight: fontWeight600,color:HexColor("#D1D3D4"))),
+        
+      // Icon(Icons.keyboard_arrow_down,size: 25,color: HexColor("#D1D3D4"),)
+    ],),
+      
   );
+
+
+
 }
 Widget fillterall() {
   return Button(

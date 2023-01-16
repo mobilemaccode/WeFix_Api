@@ -107,8 +107,8 @@ class _dashboardState extends State<dashboard> {
                                   onTap: () {
                                     Get.to(() =>  NotificationScreen());
                                   },
-                                   child: Icon(Icons.notifications_none_outlined,size: 27,color: HexColor("#6F767E"),),
-                                      // child: Image(image: AssetImage('assets/icons/Notification.png' ,),),),
+                                  //  child: Icon(Icons.notifications_none_outlined,size: 27,color: HexColor("#6F767E"),),
+                                      child: Image(image: AssetImage('assets/icons/Notification.png' ,),),
                               ),
                             ),
                           
@@ -125,7 +125,12 @@ class _dashboardState extends State<dashboard> {
               SizedBox(height: 20,),
 
              Container(
-              color: colorWhite,
+             
+              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10.0))),
+                           
               
                margin: EdgeInsets.only(left: 15,right: 15,),
               child: Column(
@@ -136,7 +141,7 @@ class _dashboardState extends State<dashboard> {
                         margin: EdgeInsets.only(left: 15,right: 15,
                         top: 10),
                     child:Column(children: [
-                Text("HEllO jONEY 👋" ,style: TextStyle(
+                Text("HELLO JONEY 👋" ,style: TextStyle(
                    color:HexColor("#666C89"),
                 fontSize: 24.0,fontWeight: fontWeight600
 
@@ -164,7 +169,12 @@ class _dashboardState extends State<dashboard> {
       SizedBox(height: 10,),
      ],),),
      SizedBox(height: 20,),
-     Container(color: colorWhite,
+     Container(
+     decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15.0))),
+                           
                margin: EdgeInsets.only(left: 15,right: 15,),
       child: Column(children: [
               Container(
@@ -194,7 +204,11 @@ class _dashboardState extends State<dashboard> {
                                ],),
                                 ),
                               ),
-                            btn6(),
+                              
+                              btnviewd()
+                 
+                           
+                           
                             
                           ]),
                       
@@ -203,45 +217,53 @@ class _dashboardState extends State<dashboard> {
                 ),
                Container(
 
-                margin: const EdgeInsets.only(left: 15, right: 10, top: 25),
-                color: colorWhite,
-                height: 677,
+                margin: const EdgeInsets.only(left: 10, right: 10,top: 15 ),
+               decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(19.0))),
+                           
+                height: 750,
                 child: GridView.builder(
                   itemCount: 8,
                   scrollDirection: Axis.horizontal,
                   physics: AlwaysScrollableScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 4,
-                      crossAxisSpacing: 0.5,
-                      mainAxisSpacing: 8.0),
+                      crossAxisSpacing:0.5,
+                      mainAxisSpacing: 0.5),
                   itemBuilder: (BuildContext context, int index) {
                     
                     return Container(
                       child: Column(
                         children: [
                           Container(
+                            
                             child: InkWell(
                               onTap: () {
                                 Get.to(() => ProductDetails());
                               },
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  SizedBox(
-                                    width: 163,
-                                    height: 140,
+                                  Container(
+                                    decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15.0))),
+                           
+                                  
 
-                                    child:
-                                        //  model.astrologerListdb[index]['profile_image'] != null
-                                        //     ? Image.network(
-                                        //         model.astrologerListdb[index]['image_url'].toString(),
-                                        //         fit: BoxFit.cover,
-                                        //         errorBuilder: (context, exception, stackTrack) =>Center(child: Text('Not \n found',textAlign: TextAlign.center,style: TextStyle(fontSize: 10),)),
-                                        //       )
-                                        //     :
-                                        Image(
+                                    child:Column(children: [
+                                      SizedBox(
+                                    width: 145,
+                                    height: 154,
+
+                                   
+                                    child:Image(
                                             image: AssetImage(
                                                 'assets/images/air.png'),
-                                            fit: BoxFit.contain),
+                                            fit: BoxFit.cover),
 
                                     //     Image(
                                     //   image: AssetImage('assets/images/clip1.png'),
@@ -249,12 +271,8 @@ class _dashboardState extends State<dashboard> {
                                     // )
                                   ),
 
-                                  // Image.asset(
-                                  //   "assets/images/phone.png",
-                                  //   fit: BoxFit.cover,
-                                  // ),
-                                
-                              SizedBox(height: 4,),
+                                 
+                                 SizedBox(height: 4,),
                                   Text(
                                     "Laptop ",
                                     style: TextStyle(
@@ -262,6 +280,12 @@ class _dashboardState extends State<dashboard> {
                                       fontSize: 20.0,fontWeight: fontWeight600
                                     ),
                                   ),
+                                     SizedBox(height: 5,),
+                                 
+                                  ],)),
+
+                                
+                             
                                 ],
                               ),
                             ),
@@ -274,52 +298,6 @@ class _dashboardState extends State<dashboard> {
                 ),
               ),
             
-              // Container(
-                
-              //   margin: const EdgeInsets.only(left: 15,right: 15,top: 15),
-              //   color: colorWhite,
-              //   height: 370,
-                
-              //   child: GridView.builder(
-              //     itemCount: 4,
-              //     scrollDirection: Axis.horizontal,
-              //     // physics: AlwaysScrollableScrollPhysics(),
-              //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              //         crossAxisCount: 2,
-              //         crossAxisSpacing: 2.0,
-              //         mainAxisSpacing: 2.0),
-              //     itemBuilder: (BuildContext context, int index) {
-              //       return Container(
-
-              //         child: Column(
-              //           children: [
-              //             Container(
-              //               child: InkWell(
-              //                 onTap: () {
-              //                   // Get.to(() => EventPage());
-              //                 },
-              //                 child: Column(
-              //                   children: [
-              //                     Image.asset("assets/images/ac.png",fit: BoxFit.cover,),
-              //                     SizedBox(height: 10,),
-              //                     Text(
-              //                       "Ac",
-              //                       style: TextStyle(
-              //                         color: colorblack,
-              //                         fontSize: 16.0,
-              //                       ),
-              //                     ),
-              //                   ],
-              //                 ),
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //       );
-              //     },
-              //   ),
-              
-              // ),
              
 
               ],),),

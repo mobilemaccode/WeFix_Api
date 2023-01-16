@@ -77,7 +77,7 @@ class _pdfpageState extends State<pdfpage> {
                             btnstyle: TextStyle(
                                 color: selectAll == 2
                                     ? colorWhite
-                                    : HexColor("#6759FF"),
+                                    : colorblack,
                                 fontSize: 16.0),
                             btnWidth: deviceWidth(context, 0.30),
                             buttonName: "Pending",
@@ -145,7 +145,7 @@ class _pdfpageState extends State<pdfpage> {
                       ? Container(
                           child: Container(
                             child: Container(
-                              height: 470.0,
+                              height: 370.0,
                               margin: EdgeInsets.all(20),
                               decoration: BoxDecoration(
                                   color: Colors.white,
@@ -207,7 +207,7 @@ class _pdfpageState extends State<pdfpage> {
                                               children: [
                                                 Text(
                                                     // model.astrologerListdb[index]['name'].toString(),
-                                                    'Laptop',
+                                                    'AC ',
                                                     style: Theme.of(context)
                                                         .textTheme
                                                         .headline6),
@@ -242,6 +242,13 @@ class _pdfpageState extends State<pdfpage> {
                                       ],
                                     ),
                                   ),
+                                      Divider(
+                                 height: 2,
+                                 thickness: 2,
+          
+                      color: HexColor("#EFEFEF"),
+          ),
+                   
                                   SizedBox(height: 15),
                                   Container(
                                     margin: EdgeInsets.only(
@@ -366,8 +373,8 @@ class _pdfpageState extends State<pdfpage> {
                                     decoration: BoxDecoration(
                                       color: colorWhite,
                                       borderRadius: BorderRadius.circular(15),
-                                      border: Border.all(color: colorblack.withOpacity(0.1)),
-                                      boxShadow: boxShadowcontainer(),
+                                      // border: Border.all(color: colorblack.withOpacity(0.1)),
+                                      // boxShadow: boxShadowcontainer(),
                                     ),
 
                                     child: Column(
@@ -487,7 +494,7 @@ class _pdfpageState extends State<pdfpage> {
                         )
                       : Container(
                           child: Container(
-                            height: 470.0,
+                            height: 400.0,
                             margin:
                                 EdgeInsets.only(top: 10, right: 30, left: 30),
                             padding: EdgeInsets.all(12),
@@ -495,6 +502,7 @@ class _pdfpageState extends State<pdfpage> {
                                 color: Colors.white,
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10.0))),
+                           
                             child: Column(
                            
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -545,7 +553,7 @@ class _pdfpageState extends State<pdfpage> {
                                             children: [
                                               Text(
                                                   // model.astrologerListdb[index]['name'].toString(),
-                                                  'Laptop',
+                                                  'AC ',
                                                  style: TextStyle(fontSize: 18,color: HexColor("#1A1D1F"),fontWeight: fontWeight600)),
                                               sizedboxheight(6.0),
                                               Row(
@@ -943,20 +951,53 @@ Widget loginsearch11(context) {
   );
 }
 
-Widget btnview1() {
+// Widget btnview1() {
 
-  return Button(
-      buttonName: "Call",
-      borderColor: HexColor("#F5F5F5"),
-      btnHeight: 45.0,
-      btnColor: HexColor("#6759FF"),
-      textColor: colorWhite,
-      btnfontsize: 18,
-      btnWidth: 89.0,
-      borderRadius: BorderRadius.circular(15.0),
-      onPressed: () {
-        // Get.to(() => ());
-      }
-      );
+//   return Button(
+//       buttonName: "Call",
+//       borderColor: HexColor("#F5F5F5"),
+//       btnHeight: 45.0,
+//       btnColor: HexColor("#6759FF"),
+//       textColor: colorWhite,
+//       btnfontsize: 18,
+//       btnWidth: 89.0,
+//       borderRadius: BorderRadius.circular(15.0),
+//       onPressed: () {
+//         // Get.to(() => ());
+//       }
+//       );
 
+// }
+
+Widget  btnview1(){
+  return 
+  Container(
+    height: 40,
+    width: 80,
+    
+    margin: const EdgeInsets.only(left: 10, right: 10,),
+    decoration: BoxDecoration(
+                  color: HexColor("#6759FF"),
+                  border: Border.all(
+                    color:colorWhite,
+                    width: 1,
+                  ),borderRadius:  BorderRadius.all(Radius.circular(15.0),)
+                  ),
+              //  decoration: BoxDecoration(
+              //                   color: Colors.white,
+                          
+              //                   borderRadius:
+              //                       BorderRadius.all(Radius.circular(15.0),)),
+                                  
+                    
+    child: Row(mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+      
+
+      Icon(Icons.call,size: 18,color:colorWhite,),
+      sizedboxwidth(10.0),
+      Text("Call",style: TextStyle(fontSize: 18,fontWeight: fontWeight600,color:colorWhite)),
+    ],),
+ 
+  );
 }

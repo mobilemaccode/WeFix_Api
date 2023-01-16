@@ -131,7 +131,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                 ),
                               ),
                                sizedboxwidth(50.0),
-                              btnview()
+                              // btnview()
 
                               ],)
                               // Text(
@@ -201,7 +201,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                 ),
                               ),
                                sizedboxwidth(50.0),
-                              btnview()
+                              // btnview()
 
                               ],)
                               // Text(
@@ -271,7 +271,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                 ),
                               ),
                                sizedboxwidth(50.0),
-                              btnview()
+                              // btnview()
 
                               ],)
                               // Text(
@@ -341,7 +341,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                 ),
                               ),
                                sizedboxwidth(50.0),
-                              btnview()
+                              // btnview()
 
                               ],)
                               // Text(
@@ -387,6 +387,7 @@ class _NotificationPageState extends State<NotificationPage> {
                         width: 10,
                       ),
                       Row(
+                        
                         children: [
                           Image.asset("assets/images/Beauty.png"),
                           sizedboxwidth(10.0),
@@ -411,7 +412,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                 ),
                               ),
                                sizedboxwidth(50.0),
-                              btnview()
+                              // btnview()
 
                               ],)
                               // Text(
@@ -442,22 +443,41 @@ class _NotificationPageState extends State<NotificationPage> {
     );
   }
 }
+
 Widget btn5() {
-  return Button(
-      buttonName: "Recent",
-    borderColor: HexColor("#EFEFEF"),
-      btnHeight: 40.0,
-      btnColor: colorWhite,
-      
-      textColor: HexColor("#6759FF"),
-      btnWidth: 100.0,
-      borderRadius: BorderRadius.circular(10.0),
-      onPressed: () {
-        // Get.to(() => ());
-      });
+  return 
+  Container(
+    height: 35,
+    width: 90,
+    
+    margin: const EdgeInsets.only(left: 10, right: 10,),
+    decoration: BoxDecoration(
+                  
+                  border: Border.all(
+                    color: HexColor("#FFFFFF"),
+                    width: 0.65,
+                  ),borderRadius:  BorderRadius.all(Radius.circular(15.0),)
+                  ),
+              //  decoration: BoxDecoration(
+              //                   color: Colors.white,
+                          
+              //                   borderRadius:
+              //                       BorderRadius.all(Radius.circular(15.0),)),
+                                  
+                    
+    child: Row(mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+      Text("Recent",style: TextStyle(fontSize: 18,fontWeight: fontWeight600,color:HexColor("#6759FF"))),
 
-
+      Icon(Icons.keyboard_arrow_down,size: 18,color: HexColor("#6759FF"),)
+    ],),
+ 
+  );
 }
+
+
+
+
 Widget btnview() {
   return Button(
       buttonName: "View",

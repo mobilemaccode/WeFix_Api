@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:service/BottamNavigation/fillter/filterpage.dart';
 import 'package:service/common/const.dart';
 
 import '../Notification/notificationPage.dart';
@@ -23,6 +24,7 @@ class _QRscanPageState extends State<QRscanPage> {
         child: Stack(
           children: [
             Column(children: [
+              // arrow(context),
               SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
@@ -206,7 +208,18 @@ class _QRscanPageState extends State<QRscanPage> {
                   //           ),
                           
                           ),
-                          
+                    Positioned(
+                      
+                        top: 40,
+                        left: 20,
+                      child: Icon(Icons.arrow_back,size: 25,color: colorblack,)) ,     
+              
+                   Positioned(
+                      
+                        top: 300,
+                        left: 30,
+                        right: 30,
+                      child: Icon(Icons.qr_code_scanner_rounded,color: colorWhite,size: 300,))      
               
            ],
         ),

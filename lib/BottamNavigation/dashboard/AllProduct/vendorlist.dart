@@ -86,7 +86,7 @@ class _VendorlistState extends State<Vendorlist> {
                                size: 8,color: colorblack,
                               ),
                                sizedboxwidth(5.0),
-                              Text("Air Conditioning services we provide include",style: TextStyle(color: HexColor("#6F767E"),fontSize: 17 ),),
+                              Text("Air Conditioning services we provide ",style: TextStyle(color: HexColor("#6F767E"),fontSize: 17 ),),
                             ],
                           ),
                            SizedBox(height: 6,),

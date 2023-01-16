@@ -151,7 +151,6 @@ Widget loginPassword(context, model) {
       ),
     
     ),
- 
   );
 }
 
@@ -161,7 +160,7 @@ Widget loginBtn(context) {
     buttonName: 'Sign in',
     btnfontsize: 24.0,
     btnHeight: 55.0,
-    btnWidth: 360.0,
+    btnWidth: 340.0,
     textColor: Colors.white,
     // btnColor: Colors.blueAccent,
     btnColor: HexColor('#6759FF'),
